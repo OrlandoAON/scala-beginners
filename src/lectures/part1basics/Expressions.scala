@@ -1,4 +1,4 @@
-package lectures
+package lectures.part1basics
 
 object Expressions extends App {
 
@@ -6,16 +6,16 @@ object Expressions extends App {
   println(x)
 
   println(2 + 3 * 4)
- // + - / * & | ^ << >> >>> (scala only: right shift with zero extension)
+  // + - / * & | ^ << >> >>> (scala only: right shift with zero extension)
 
   println(1 == x)
- // == != > >= < <=
+  // == != > >= < <=
 
   println(!(1 == x))
   // ! || &&
 
   var aVariable = 2
-  aVariable +=3 // -=, =, *=,/= side effects
+  aVariable += 3 // -=, =, *=,/= side effects
   println(aVariable)
 
   // Instructions (tell computer to DO - similar to java) vs Expressions (VALUE) computing language
@@ -25,26 +25,26 @@ object Expressions extends App {
   val aConditionedValue = if (aCondition) 5 else 3 // if expression and NOT if instruction
   println(aConditionedValue)
   var i = 0
-  while ( i < 10) {
+  while (i < 10) {
     println(i)
-    i+=1
+    i += 1
   }
 
   // NEVER WRITE THIS WHILE IN SCALA AGAIN. this is imperative programming like in Java/Python, not mostly used in computing programming
   // EVERYTHING in scale is a expression
 
-  val aWeirdValue = (aVariable = 3)// Unit type, equivalent to void in Java
+  val aWeirdValue = (aVariable = 3) // Unit type, equivalent to void in Java
   println(aWeirdValue) // return () unique value returned by unit
 
-  val aWhile = while ( i < 10) { // REMEMBER everything in scale is a expression
+  val aWhile = while (i < 10) { // REMEMBER everything in scale is a expression
     println(i)
-    i+=1
+    i += 1
   }
   println(aWhile) // return () unique value returned by unit
 
   //side effects : expressions returning Units (imperative programing instructions that returns Unit in Scala: println(); whiles; reassigning
 
-// code blocks
+  // code blocks
 
   val aCodeBlock = {
     val y = 2
@@ -66,10 +66,9 @@ object Expressions extends App {
     }
     println(someOtherValue)
 
-// NEVER WRITE WHILE in SCALA AGAIN =)
+    // NEVER WRITE WHILE in SCALA AGAIN =)
 
   }
-
 
 
 }
